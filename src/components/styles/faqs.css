@@ -1,0 +1,100 @@
+/* Main Container */
+.faqsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Container */
+.faqsContainer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Item */
+.faqItem {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* FAQ Question */
+.faqQuestion {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 15px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect on Question */
+.faqQuestion:hover {
+    background: #e0e0e0;
+}
+
+/* FAQ Answer */
+.faqAnswer {
+    padding: 15px 18px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Open State for FAQ Answer */
+.faqItem.open .faqAnswer {
+    max-height: 500px;
+    padding: 15px 18px;
+}
+
+/* FAQ Expand/Collapse Icon */
+.icon {
+    font-size: 18px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+/* Rotating Icon when Open */
+.faqItem.open .icon {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faqsContainer {
+        padding: 15px;
+    }
+    
+    .faqQuestion {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+
+    .faqAnswer {
+        font-size: 13px;
+        padding: 12px 15px;
+    }
+}

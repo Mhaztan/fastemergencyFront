@@ -1,0 +1,206 @@
+/* styles/submitForm.css */
+
+/* Live Chat Container */
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Floating Chat Button */
+.chat-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chat Icon */
+.chat-icon {
+    font-size: 1.3rem;
+}
+
+/* Hover Effect */
+.chat-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Floating Button Effect */
+.chat-button::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Notification Pulse */
+.chat-button:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.4);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .chat-button {
+        font-size: 0.9rem;
+        padding: 12px 18px;
+    }
+
+    .chat-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Side Form Styles */
+.side-form {
+    position: fixed;
+    top: 0;
+    right: -60%; /* Initially hidden */
+    width: 60%;
+    max-width: 400px; /*Limit */
+    height: 80%;
+    background: var(--card-background);
+    color: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.side-form.open {
+    right: 0;
+}
+
+/* Close Button */
+.side-form .close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: gray transparent;
+    color: var(--text-color);
+}
+
+.submit-button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #c62828;
+}
+
+/* Messages */
+.message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.side-form {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start fully hidden */
+    width: 60%;
+    max-width: 400px;
+    height: 80%; /* Cover the full height */
+    background: #dc8989;
+    color: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.side-form.open {
+    right: 0; /* Slide in when open */
+}
+
+
+/* Mobile Responsiveness for the Side Form */
+@media (max-width: 768px) {
+    .side-form {
+        width: 60%;
+        max-width: none; /* Remove max width on small screens */
+        height: 80%; /* Increase height on smaller screens */
+        right: -100%;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+    }
+}

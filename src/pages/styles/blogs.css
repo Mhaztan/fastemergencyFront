@@ -1,0 +1,120 @@
+/* Blog Page */
+.blogsPage {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-color);
+}
+
+/* Title */
+.blogsTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Filters */
+.blogsFilters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.blogSearch {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.blogSort {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+/* Blog Grid */
+.blogsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Blog Card */
+.blogCard {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Title */
+.blogTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Blog Content */
+.blogContent {
+    font-size: 1rem;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Read More */
+.readMore {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.readMore:hover {
+    background: var(--primary-color-dark);
+}
+
+/* Error & Loading */
+.loadingMessage,
+.errorMessage,
+.noBlogs {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    color: var(--error-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blogsFilters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .blogsGrid {
+        grid-template-columns: 1fr;
+    }
+}

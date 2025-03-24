@@ -1,0 +1,247 @@
+/* src/components/Header.css */
+
+/* General Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Logo */
+.header-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-nav ul li {
+    margin-left: 20px;
+}
+
+.header-nav ul li a,
+.header-dropdown button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Desktop Search Bar */
+.header-search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header-search-bar input {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.header-search-bar button {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -3000px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 2000;
+    overflow-y: auto; /* Added to allow scrolling on smaller screens */
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-close-button {
+    color: white;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Search Bar */
+.sidebar-search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.sidebar-search-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.sidebar-search-bar button {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+    display: inline-block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Profile modal styles */
+.profile-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000; /* Ensure it's on top of everything */
+}
+
+.profile-modal-content {
+    background-color: rgb(98, 98, 98);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 500px; /* Adjust as needed */
+    max-width: 90%; /* Ensure it fits on smaller screens */
+    position: relative;
+}
+
+.profile-close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    background-color: black;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: #ff5733;
+    }
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+        background-color: #666;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: #ff5733;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        position: relative;
+        display: block;
+    }
+
+    .hamburger-button {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+        color: white;
+        font-size: 2rem;
+        background: none;
+        border: none;
+    }
+    .logout-button,
+    .profile-button {
+        color: #fff;
+        text-decoration: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+}

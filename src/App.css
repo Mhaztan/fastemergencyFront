@@ -1,0 +1,146 @@
+/* Basic CSS - expand this significantly! */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #eee;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.emergency-services {
+  padding: 30px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  display: block;
+}
+/* Add styling for other components */
+
+/* Mobile-friendly styling */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column; /* Stack logo and nav */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  header nav {
+    margin-top: 10px; /* Add space between logo and nav */
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stack nav items */
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -20050px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.sidebar.open {
+  right: 0; /* Slide in */
+}
+
+.sidebar .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block; /* Make links fill the list item */
+  padding: 5px 0;
+}
+
+/* Hamburger button styles */
+.hamburger-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+}

@@ -1,0 +1,94 @@
+/* Mobile App Promo Section */
+.mobile-app-promo {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+/* Container */
+.container-mobile-app-promo {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Store Buttons */
+.store-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.store-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.app-store {
+    background: black;
+    color: white;
+}
+
+.google-play {
+    background: #34a853;
+    color: white;
+}
+
+.store-buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* Mockup */
+.mockup {
+    flex: 1;
+    text-align: center;
+}
+
+.mockup img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-mobile-app-promo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .store-buttons {
+        justify-content: center;
+    }
+}

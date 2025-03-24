@@ -1,0 +1,86 @@
+/* General Styles */
+.terms {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Header */
+.terms-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #007bff;
+}
+
+.terms-title {
+    font-size: 30px;
+    color: #007bff;
+    margin: 0;
+}
+
+.terms-updated {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Sections */
+.terms-section {
+    margin-bottom: 25px;
+}
+
+.terms-heading {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+    padding-left: 12px;
+}
+
+/* Text & Lists */
+.terms-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.terms-list {
+    padding-left: 20px;
+}
+
+.terms-item {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.terms-item strong {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .terms-title {
+        font-size: 26px;
+    }
+
+    .terms-heading {
+        font-size: 18px;
+    }
+
+    .terms-text, .terms-item {
+        font-size: 14px;
+    }
+}

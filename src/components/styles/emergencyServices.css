@@ -1,0 +1,82 @@
+/* Emergency Services Section */
+.emergency-services {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    text-align: center;
+}
+
+/* Container */
+.container-emergency {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Description */
+.emergency-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon */
+.icon-wrapper {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Call Button */
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: white;
+    color: #dd2476;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-button:hover {
+    background: #f8c6d4;
+    transform: scale(1.05);
+}
+
+/* Disclaimer */
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

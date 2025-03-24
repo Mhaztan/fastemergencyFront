@@ -1,0 +1,86 @@
+/* General Styles */
+.disclaimer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.disclaimer-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+.disclaimer-title {
+    font-size: 28px;
+    color: #007bff;
+    margin: 0;
+}
+
+.disclaimer-updated {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Sections */
+.disclaimer-section {
+    margin-bottom: 25px;
+}
+
+.disclaimer-heading {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+/* Text & Lists */
+.disclaimer-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.disclaimer-list {
+    padding-left: 20px;
+}
+
+.disclaimer-item {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.disclaimer-item strong {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .disclaimer {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .disclaimer-title {
+        font-size: 24px;
+    }
+
+    .disclaimer-heading {
+        font-size: 18px;
+    }
+
+    .disclaimer-text, .disclaimer-item {
+        font-size: 14px;
+    }
+}

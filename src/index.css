@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  /* Automatic dark/light mode based on system preference */
+  background-color: #fff;
+  color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+/* Add more global styles here */

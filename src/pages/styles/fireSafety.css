@@ -1,0 +1,59 @@
+/* src/pages/FireSafety.css */
+.fireSafetyPage {
+  padding: 2rem;
+  background-color: #878686;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.fireSafetyHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fireSafetyHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.fireSafetyHeader p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.fireSafetyContent {
+  margin-top: 2rem;
+}
+
+.fireSafetyTips h2,
+.firePreventionChecklist h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.fireSafetyTips ul,
+.firePreventionChecklist ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.fireSafetyTips li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.firePreventionChecklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.firePreventionChecklist input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Add more specific styles as needed */
