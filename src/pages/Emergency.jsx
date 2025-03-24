@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './styles/emergency.css';
 import { getAllEmergencyContacts } from '../utils/api';
 import { Link } from 'react-router-dom';
+import SubmitForm from '../components/SubmitForm';
 
 function Emergency() {
     const [contacts, setContacts] = useState([]);
@@ -159,6 +160,7 @@ function Emergency() {
                     </ul>
                 )}
             </main>
+            <SubmitForm />
         </div>
     );
 }

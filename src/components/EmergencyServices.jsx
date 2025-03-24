@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import "./styles/EmergencyServices.css";
+import "./styles/emergencyServices.css";
 import { FaPhone, FaFireExtinguisher, FaAmbulance, FaCar, FaCross, FaRoad } from "react-icons/fa";
 import { FaPersonMilitaryRifle } from "react-icons/fa6";
 

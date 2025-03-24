@@ -16,8 +16,8 @@ const Home = () => {
                 <HeroSection />
                 <EmergencyServices />
                 <HowItWorks />
-                {/* <AIBlogPreview /> */}
-                {/* <EmergencyShop /> */}
+                <AIBlogPreview />
+                <EmergencyShop />
                 <FeaturesBenefits />
                 <SubmitForm />
                 <FAQs />
